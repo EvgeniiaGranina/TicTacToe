@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 import com.example.tictactoe.model.Model;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 
 public class HelloController {
@@ -32,6 +33,17 @@ public class HelloController {
             nowSym = (nowSym == 1) ? 0 : 1;
             updateBoard();
         }
+        if (model.isCheckGameIsOver()) {
+            informationAlert("The game is tied!");
+        }
+    }
+
+    private void informationAlert(String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Game results");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 
     private void updateBoard() {

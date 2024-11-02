@@ -14,7 +14,7 @@ public class Model {
             if (board[index] == 0) {
 
                 board[index] = playerNumber == 0 ? player1Symbol : player2Symbol;
-                checkGameIsOver();
+                isCheckGameIsOver();
                 UpdateGameBoard();
                 return true;
             }
@@ -29,8 +29,13 @@ public class Model {
 
     }
 
-    private void checkGameIsOver() {
-
+    public boolean isCheckGameIsOver() {
+        for (char c : board) {
+            if (c == 0) {
+                return false;
+            }
+        }
+        return true;
 
     }
 
