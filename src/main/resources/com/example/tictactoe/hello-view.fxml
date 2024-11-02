@@ -26,54 +26,54 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Button mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick">
+                <Button fx:id="button0" mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick">
                     <font>
                         <Font name="MV Boli" size="48.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="114.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
+                <Button fx:id= "button1" mnemonicParsing="false" prefHeight="114.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
                         GridPane.columnIndex="2">
                     <font>
                         <Font name="MV Boli" size="48.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
+                <Button fx:id="button2" mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
                         GridPane.columnIndex="1">
                     <font>
                         <Font name="MV Boli" size="48.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
+                <Button fx:id="button3" mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
                         GridPane.rowIndex="1">
                     <font>
                         <Font name="MV Boli" size="48.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
+                <Button fx:id="button4" mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
                         GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <font>
                         <Font name="MV Boli" size="48.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
+                <Button fx:id="button5" mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
                         GridPane.columnIndex="2" GridPane.rowIndex="1">
                     <font>
                         <Font name="MV Boli" size="48.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
+                <Button fx:id="button6" mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
                         GridPane.rowIndex="2">
                     <font>
                         <Font name="MV Boli" size="48.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
+                <Button fx:id="button7" mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
                         GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <font>
                         <Font name="MV Boli" size="48.0" />
                     </font>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
+                <Button fx:id="button8" mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
                         GridPane.columnIndex="2" GridPane.rowIndex="2">
                     <font>
                         <Font name="MV Boli" size="48.0" />
