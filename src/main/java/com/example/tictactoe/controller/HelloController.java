@@ -25,10 +25,13 @@ public class HelloController {
     @FXML
     void btnClick(ActionEvent event) {
 
-        nowSym = (nowSym == 1) ? 0 : 1;
+
         int index = Arrays.asList(buttons).indexOf((Button)event.getSource());
-        model.nextMove(index, nowSym);
-        updateBoard();
+        boolean success = model.nextMove(index, nowSym);
+        if (success) {
+            nowSym = (nowSym == 1) ? 0 : 1;
+            updateBoard();
+        }
     }
 
     private void updateBoard() {

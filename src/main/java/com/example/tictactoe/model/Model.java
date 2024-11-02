@@ -9,11 +9,19 @@ public class Model {
 
     }
 
-    public void nextMove(int index, int playerNumber) {
+    public boolean nextMove(int index, int playerNumber)  {
         if(index >= 0 && index < board.length) {
-            board[index] = playerNumber == 0 ? player1Symbol : player2Symbol;
-            checkGameIsOver();
-            UpdateGameBoard();
+            if (board[index] == 0) {
+
+                board[index] = playerNumber == 0 ? player1Symbol : player2Symbol;
+                checkGameIsOver();
+                UpdateGameBoard();
+                return true;
+            }
+            else
+                return false;
+        } else {
+            return false;
         }
     }
 
