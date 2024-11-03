@@ -31,13 +31,13 @@
                         <Font name="MV Boli" size="48.0" />
                     </font>
                 </Button>
-                <Button fx:id= "button1" mnemonicParsing="false" prefHeight="114.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
+                <Button fx:id= "button2" mnemonicParsing="false" prefHeight="114.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
                         GridPane.columnIndex="2">
                     <font>
                         <Font name="MV Boli" size="48.0" />
                     </font>
                 </Button>
-                <Button fx:id="button2" mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
+                <Button fx:id="button1" mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
                         GridPane.columnIndex="1">
                     <font>
                         <Font name="MV Boli" size="48.0" />

@@ -1,23 +1,28 @@
 package com.example.tictactoe.model;
 
+import javafx.scene.control.Button;
+
+import java.util.Arrays;
+
 public class Model {
     private final char[] board = new char[9];
     private static final char player1Symbol = 'X';
     private static final char player2Symbol = 'O';
+    private static final char clearCellSymbol = 0;
 
     public  Model() {
-
+        resetBoard();
     }
 
     public GameState nextMove(int index, int playerNumber)  {
         if(index >= 0 && index < board.length) {
-            if (board[index] == 0) {
+            if (board[index] == clearCellSymbol) {
 
                 board[index] = playerNumber == 0 ? player1Symbol : player2Symbol;
-                if (CheckGameIsOver())
-                    return GameState.GAME_OVER;
                 if (CheckWin())
                     return GameState.GAME_WON;
+                if (CheckGameIsOver())
+                    return GameState.GAME_OVER;
                 return GameState.NEXT_MOVE;
             }
             else
@@ -33,27 +38,31 @@ public class Model {
     };
 
     public boolean CheckWin() {
-        char[] board = getBoard();
 
         for (int[] condition : winConditions) {
-            if (board[condition[0]] != 0 &&
+            System.out.println(board[condition[0]] + " " + board[condition[1]] + " " + board[condition[2]]);
+            if (board[condition[0]] != clearCellSymbol &&
                     board[condition[0]] == board[condition[1]] &&
                     board[condition[1]] == board[condition[2]]) {
                 return true;
             }
         }
+        System.out.println("-------");
         return false;
     }
 
 
     public boolean CheckGameIsOver() {
         for (char c : board) {
-            if (c == 0) {
+            if (c == clearCellSymbol) {
                 return false;
             }
         }
         return true;
 
+    }
+    public void resetBoard() {
+        Arrays.fill(board, clearCellSymbol);
     }
 
     public char[] getBoard() {

@@ -6,9 +6,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 
 import java.net.URL;
 import java.util.Arrays;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class HelloController {
@@ -54,7 +56,17 @@ public class HelloController {
         alert.setTitle("Game results");
         alert.setHeaderText(null);
         alert.setContentText(message);
-        alert.showAndWait();
+
+        ButtonType buttonType = new ButtonType("New game");
+        alert.getButtonTypes().setAll(buttonType);
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && result.get() == buttonType) {
+            model.resetBoard();
+            nowSym = 0;
+            updateBoard();
+        } else {
+            //Exit from game
+        }
     }
 
     private void updateBoard() {
