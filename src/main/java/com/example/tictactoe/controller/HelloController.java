@@ -1,14 +1,15 @@
 package com.example.tictactoe.controller;
 
-import java.net.URL;
-import java.util.Arrays;
-import java.util.ResourceBundle;
-
+import com.example.tictactoe.model.GameState;
 import com.example.tictactoe.model.Model;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+
+import java.net.URL;
+import java.util.Arrays;
+import java.util.ResourceBundle;
 
 public class HelloController {
 
@@ -28,13 +29,23 @@ public class HelloController {
 
 
         int index = Arrays.asList(buttons).indexOf((Button)event.getSource());
-        boolean success = model.nextMove(index, nowSym);
-        if (success) {
-            nowSym = (nowSym == 1) ? 0 : 1;
-            updateBoard();
-        }
-        if (model.isCheckGameIsOver()) {
-            informationAlert("The game is tied!");
+        GameState success = model.nextMove(index, nowSym);
+
+        switch (success) {
+            case NEXT_MOVE -> {
+                nowSym = (nowSym == 1) ? 0 : 1;
+                updateBoard();
+            }
+            case GAME_WON -> {
+                updateBoard();
+                informationAlert("You are won!");
+                //resetGame();
+            }
+            case GAME_OVER -> {
+                updateBoard();
+                informationAlert("The game is tied!");
+                //resetGame();
+            }
         }
     }
 
