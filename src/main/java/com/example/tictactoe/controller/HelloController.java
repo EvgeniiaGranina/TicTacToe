@@ -53,7 +53,10 @@ public class HelloController {
             }
             case GAME_WON -> {
                 updateBoard();
-                informationAlert("You are won!");
+                if (nowSym == 0)
+                    informationAlert("You are won!");
+                if (nowSym == 1)
+                    informationAlert("Bot is won!");
             }
             case GAME_OVER -> {
                 updateBoard();
