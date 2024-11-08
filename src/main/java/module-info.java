@@ -7,4 +7,6 @@ module com.example.tictactoe {
     exports com.example.tictactoe;
     exports com.example.tictactoe.controller;
     opens com.example.tictactoe.controller to javafx.fxml;
+    exports com.example.tictactoe.model to javafx.fxml;
+    opens com.example.tictactoe.model to javafx.fxml;
 }

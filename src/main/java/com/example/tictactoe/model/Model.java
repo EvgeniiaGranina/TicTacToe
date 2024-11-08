@@ -1,6 +1,7 @@
 package com.example.tictactoe.model;
 
-import javafx.scene.control.Button;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 import java.util.Arrays;
 
@@ -9,6 +10,11 @@ public class Model {
     private static final char player1Symbol = 'X';
     private static final char player2Symbol = 'O';
     private static final char clearCellSymbol = 0;
+
+    private int player1Score = 0;
+    private int player2Score = 0;
+    private StringProperty scoring1 = new SimpleStringProperty("0");
+    private StringProperty scoring2 = new SimpleStringProperty("0");
 
     public  Model() {
         resetBoard();
@@ -19,7 +25,7 @@ public class Model {
             if (board[index] == clearCellSymbol) {
 
                 board[index] = playerNumber == 0 ? player1Symbol : player2Symbol;
-                if (CheckWin())
+                if (CheckWin(board[index]))
                     return GameState.GAME_WON;
                 if (CheckGameIsOver())
                     return GameState.GAME_OVER;
@@ -37,17 +43,15 @@ public class Model {
             {0, 4, 8}, {2, 4, 6}
     };
 
-    public boolean CheckWin() {
-
+    public boolean CheckWin(char playerSymbol) {
         for (int[] condition : winConditions) {
-            System.out.println(board[condition[0]] + " " + board[condition[1]] + " " + board[condition[2]]);
             if (board[condition[0]] != clearCellSymbol &&
                     board[condition[0]] == board[condition[1]] &&
                     board[condition[1]] == board[condition[2]]) {
+                updateScore(playerSymbol);
                 return true;
             }
         }
-        System.out.println("-------");
         return false;
     }
 
@@ -65,7 +69,33 @@ public class Model {
         Arrays.fill(board, clearCellSymbol);
     }
 
+    private void updateScore(char playerSymbol) {
+        if (playerSymbol == player1Symbol) {
+            player1Score++;
+            scoring1.set(String.valueOf(player1Score));
+        } else {
+            player2Score++;
+            scoring2.set(String.valueOf(player2Score));
+        }
+    }
+
     public char[] getBoard() {
         return board;
+    }
+
+    public String getPlayer2Score() {
+        return scoring2.get();
+    }
+
+    public StringProperty player1ScoreProperty() {
+        return scoring1;
+    }
+
+    public StringProperty player2ScoreProperty() {
+        return scoring2;
+    }
+
+    public String getPlayer1Score() {
+        return scoring1.get();
     }
 }

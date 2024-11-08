@@ -37,19 +37,22 @@
                         <Font name="MV Boli" size="48.0" />
                     </font>
                 </Button>
-                <Button fx:id="button1" mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
+                <Button fx:id="button1" mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5"
+                        onAction="#btnClick"
                         GridPane.columnIndex="1">
                     <font>
                         <Font name="MV Boli" size="48.0" />
                     </font>
                 </Button>
-                <Button fx:id="button3" mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
+                <Button fx:id="button3" mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5"
+                        onAction="#btnClick"
                         GridPane.rowIndex="1">
                     <font>
                         <Font name="MV Boli" size="48.0" />
                     </font>
                 </Button>
-                <Button fx:id="button4" mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5" onAction="#btnClick"
+                <Button fx:id="button4" mnemonicParsing="false" prefHeight="116.0" prefWidth="125.0" textFill="#06745ce5"
+                        onAction="#btnClick"
                         GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <font>
                         <Font name="MV Boli" size="48.0" />
@@ -81,27 +84,27 @@
                 </Button>
             </children>
         </GridPane>
-        <Label layoutX="393.0" layoutY="104.0" prefHeight="62.0" prefWidth="116.0" text="USER" textFill="#2606f8">
+        <Label layoutX="393.0" layoutY="104.0" prefHeight="62.0" prefWidth="116.0" text="Player1" textFill="#2606f8">
             <font>
-                <Font name="MV Boli" size="36.0" />
+                <Font name="MV Boli" size="16.0" />
             </font>
         </Label>
         <Label layoutX="110.0" layoutY="3.0" prefHeight="79.0" prefWidth="307.0" text="Tic Tac Toe" textFill="#3305fd">
             <font>
-                <Font name="MV Boli" size="51.0" />
+                <Font name="MV Boli" size="36.0" />
             </font>
         </Label>
-        <Label layoutX="437.0" layoutY="182.0" text="0" textFill="#0d06e9">
+        <Label layoutX="437.0" layoutY="182.0" text="${controller.model.player1Score}" textFill="#0d06e9">
             <font>
                 <Font name="MV Boli" size="24.0" />
             </font>
         </Label>
-        <Label layoutX="396.0" layoutY="255.0" prefHeight="62.0" prefWidth="116.0" text="COMP" textFill="#3c07eb">
+        <Label layoutX="396.0" layoutY="255.0" prefHeight="62.0" prefWidth="116.0" text="Player2" textFill="#3c07eb">
             <font>
-                <Font name="MV Boli" size="36.0" />
+                <Font name="MV Boli" size="16.0" />
             </font>
         </Label>
-        <Label layoutX="437.0" layoutY="338.0" text="0" textFill="#3b08f2">
+        <Label layoutX="437.0" layoutY="338.0" text="${controller.model.player2Score}" textFill="#3b08f2">
             <font>
                 <Font name="MV Boli" size="24.0" />
             </font>
