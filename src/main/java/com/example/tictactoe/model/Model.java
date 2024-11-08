@@ -7,9 +7,9 @@ import java.util.Arrays;
 
 public class Model {
     private final char[] board = new char[9];
-    private static final char player1Symbol = 'X';
-    private static final char player2Symbol = 'O';
-    private static final char clearCellSymbol = 0;
+     static final char player1Symbol = 'X';
+     static final char player2Symbol = 'O';
+     static final char clearCellSymbol = 0;
 
     private int player1Score = 0;
     private int player2Score = 0;
