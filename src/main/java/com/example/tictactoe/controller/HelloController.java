@@ -54,7 +54,7 @@ public class HelloController {
             case GAME_WON -> {
                 updateBoard();
                 if (nowSym == 0)
-                    informationAlert("You are won!");
+                    informationAlert("Player are won!");
                 if (nowSym == 1)
                     informationAlert("Bot is won!");
             }
