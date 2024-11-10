@@ -14,6 +14,24 @@ class ModelTest {
     }
 
     @Test
+    void testIfMoveIsValid() {
+        model.nextMove(0, 0);
+        assertEquals(Model.player1Symbol, model.getBoard()[0]);
+    }
+
+    @Test
+    void testIfMoveIsInvalid() {
+        //Arrange
+        model.nextMove(0, 0);
+
+        //Act
+        model.nextMove(0, 1);
+
+        //Assert
+        assertEquals(Model.player1Symbol, model.getBoard()[0]);
+    }
+
+    @Test
     void testHorizontalWin() {
         model.nextMove(6, 0);
         model.nextMove(7, 0);
