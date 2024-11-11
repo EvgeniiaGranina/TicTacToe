@@ -60,7 +60,7 @@ public class HelloController {
             }
             case GAME_OVER -> {
                 updateBoard();
-                informationAlert("The game is tied!");
+                informationAlert("It is draw!");
             }
         }
     }
